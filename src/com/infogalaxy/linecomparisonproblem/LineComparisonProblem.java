@@ -3,23 +3,26 @@ package com.infogalaxy.linecomparisonproblem;
 import java.util.Scanner;
 
 public class LineComparisonProblem {
+       //UC-3-Comparison of Two lines
        public static void equals(double lengthofFirstLine,double lengthofSecondline){
             if (lengthofFirstLine == lengthofSecondline){
                 System.out.println("Both Line Are Same.");
-            }else {
-                System.out.println("Both Line Are Not Same.");
+            }else if (lengthofFirstLine > lengthofSecondline) {
+                    System.out.println("First Line Is Greater.");
+                }else {
+                    System.out.println("Second Line Is Greater.");
+                }
             }
-        }
     public static void main(String[] args) {
         System.out.println("Welcome To Line Comprasion Computation Program On Master Branch");
-        double x1 = 0;
-        double x2 = 0;
-        double y1 = 0;
-        double y2 = 0;
-        double a1 = 0;
-        double a2 = 0;
-        double b1 = 0;
-        double b2 = 0;
+        double x1 ;
+        double x2 ;
+        double y1 ;
+        double y2 ;
+        double a1 ;
+        double a2 ;
+        double b1 ;
+        double b2 ;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter The Value Of X1 Co-ordinate : ");
         x1 = sc.nextInt();
@@ -42,6 +45,6 @@ public class LineComparisonProblem {
         double lengthofsecondline = Math.sqrt(Math.pow((a2 - a1),2) + Math.pow((b2 - b1),2));
         System.out.println("Length Of Second line Is : "+ lengthofsecondline);
 
-        equals(lengthofsecondline,lengthofFirstLine);
+        equals(lengthofFirstLine,lengthofsecondline);
     }
 }
